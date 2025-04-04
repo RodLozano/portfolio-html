@@ -61,7 +61,7 @@ nav ul {
   list-style-type: none;
   display: flex;
   gap: 1.5rem;
-  justify-content:  flex-start;
+  justify-content:  flex-end;
   align-items: center;
 }
 
