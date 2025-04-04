@@ -4,62 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rodrigo Lozano Luciáñez - Perfil Profesional</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
-    header { background-color: #003366; padding: 1rem; color: white; }
-    nav ul { list-style-type: none; margin: 0; padding: 0; display: flex; gap: 2rem; position: relative; }
-    nav ul li { position: relative; }
-    nav ul li a { color: white; text-decoration: none; font-weight: bold; padding: 1rem; display: block; }
-    nav ul li a:hover { text-decoration: underline; }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #004080;
-      min-width: 200px;
-      z-index: 1;
-      top: 100%;
-      left: 0;
-    }
-
-    .dropdown-content li a {
-      color: white;
-      padding: 0.75rem;
-    }
-
-    .dropdown-content li a:hover {
-      background-color: #005599;
-    }
-
-    .show { display: block; }
-
-    main { padding: 2rem; }
-    h1, h2, h3 { color: #003366; }
-    ul { list-style-type: disc; margin-left: 2rem; }
-    a { color: #0066cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Me</a></li>
-        <li class="dropdown">
-          <a href="#" id="dropdownToggle">Projects ▾</a>
-          <ul class="dropdown-content" id="dropdownMenu">
-            <li><a href="projects/project1.html">Project 1</a></li>
-            <li><a href="projects/project2.html">Project 2</a></li>
-            <li><a href="projects/project3.html">Project 3</a></li>
-          </ul>
-        </li>
-        <li><a href="future-projects.html">Future Projects</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
+  <div id="menu-container"></div>
   <main>
     <h1>Rodrigo Lozano Luciáñez</h1>
     <p><strong>Data Scientist | Consultant Data&AI at Accenture</strong><br>
@@ -120,8 +68,12 @@
   </main>
 
   <!-- ✅ Solo un script, al final -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-container').innerHTML = data;
+
       const toggle = document.getElementById("dropdownToggle");
       const menu = document.getElementById("dropdownMenu");
 
@@ -130,7 +82,7 @@
         menu.classList.toggle("show");
       });
     });
-  </script>
+</script>
 </body>
 </html>
 
