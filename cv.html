@@ -1,1 +1,38 @@
-Aqui se debe poder descargar el CV
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Rodrigo Lozano Luciáñez</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Menú modular -->
+  <div id="menu-container"></div>
+
+  <main>
+    <h1>Aqui se debe poder previsualizar y descargar el CV</h1>
+
+  </main>
+
+  <!-- Script para cargar el menú y activar el dropdown -->
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-container').innerHTML = data;
+
+        const toggle = document.getElementById("dropdownToggle");
+        const menu = document.getElementById("dropdownMenu");
+
+        toggle.addEventListener("click", function(event) {
+          event.preventDefault();
+          menu.classList.toggle("show");
+        });
+      });
+  </script>
+
+</body>
+</html>
