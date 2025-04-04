@@ -14,7 +14,7 @@
 
     /* Estilos del menú desplegable */
     .dropdown-content {
-      display: block; /* ← Esto mantiene el menú desplegado permanentemente */
+      display: none; /* Oculto por defecto */
       position: absolute;
       background-color: #004080;
       min-width: 200px;
@@ -32,6 +32,8 @@
       background-color: #005599;
     }
 
+    .show { display: block; } /* Clase para mostrar el menú */
+
     main { padding: 2rem; }
     h1, h2, h3 { color: #003366; }
     ul { list-style-type: disc; margin-left: 2rem; }
@@ -45,8 +47,8 @@
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li class="dropdown">
-          <a href="#">Proyectos ▾</a>
-          <ul class="dropdown-content">
+          <a href="#" id="dropdownToggle">Proyectos ▾</a>
+          <ul class="dropdown-content" id="dropdownMenu">
             <li><a href="projects/project1.html">Proyecto 1</a></li>
             <li><a href="projects/project2.html">Proyecto 2</a></li>
             <li><a href="projects/project3.html">Proyecto 3</a></li>
@@ -117,6 +119,16 @@
     <p>🌐 <a href="https://www.linkedin.com/in/rodrigo-lozano-lucianez/" target="_blank">Perfil de LinkedIn</a></p>
     <p>🔗 <a href="https://www.enlace-personalizado.com" target="_blank">Otro enlace personalizado</a></p>
   </main>
+  
+  <script>
+    // Script para mostrar/ocultar el menú al hacer clic
+    document.getElementById("dropdownToggle").addEventListener("click", function(event) {
+      event.preventDefault(); // Previene que el enlace actúe como tal
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    });
+  </script>
+</body>
+</html>
 </body>
 </html>
 
