@@ -11,7 +11,7 @@ Este repositorio contiene una colección organizada de mis experiencias profesio
 - `contact.html`: Página de contacto (en construcción o editable).
 - `style.css`: Estilos reutilizables para el sitio (opcional si se separa del HTML).
 - `README.md`: Este archivo.
-
+```bash
 portfolio/
 │
 ├── index.html                  # Página principal (tu CV y presentación general)
@@ -32,7 +32,7 @@ portfolio/
 │       └── cv.pdf              # CV descargable en PDF
 │
 └── README.md                  # Documentación del repositorio
-
+```
 ## 🧑‍💻 Tecnologías utilizadas
 
 - **HTML5** para estructuración del contenido.
