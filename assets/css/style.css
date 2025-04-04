@@ -1,18 +1,31 @@
-/* ==== NAVBAR ==== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background-color: #003366;
+  padding: 1rem;
+  color: white;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #003366;
   display: flex;
-  gap: 1.5rem;
-}
-
-nav li {
+  gap: 2rem;
   position: relative;
 }
 
-nav a {
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -20,35 +33,32 @@ nav a {
   display: block;
 }
 
-nav a:hover {
-  background-color: #005599;
+nav ul li a:hover {
+  text-decoration: underline;
 }
 
-/* ==== DROPDOWN ==== */
+/* Menú desplegable */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #004080;
   min-width: 200px;
   z-index: 1;
-  flex-direction: column;
+  top: 100%;
+  left: 0;
 }
 
 .dropdown-content li a {
+  color: white;
   padding: 0.75rem;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown-content li a:hover {
+  background-color: #005599;
 }
 
-/* ==== GENERAL ==== */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  color: #333;
+.show {
+  display: block;
 }
 
 main {
@@ -60,7 +70,7 @@ h1, h2, h3 {
 }
 
 ul {
-  list-style-type: square;
+  list-style-type: disc;
   margin-left: 2rem;
 }
 
@@ -72,3 +82,4 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
