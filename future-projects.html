@@ -4,29 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Future Projects</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
-    header { background-color: #003366; padding: 1rem; color: white; }
-    nav ul { list-style-type: none; margin: 0; padding: 0; display: flex; gap: 2rem; }
-    nav ul li { display: inline; }
-    nav ul li a { color: white; text-decoration: none; font-weight: bold; }
-    nav ul li a:hover { text-decoration: underline; }
-    main { padding: 2rem; }
-    h1 { color: #003366; }
-    ul { list-style-type: square; margin-left: 2rem; }
-  </style>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="profile.html">Perfil</a></li>
-        <li><a href="future_projects.html">Proyectos Futuros</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="menu-container"></div>
   <main>
     <h1>Future Projects</h1>
     <p>Below is a list of upcoming project ideas and research topics Rodrigo Lozano Luciáñez is planning to explore:</p>
@@ -57,5 +38,23 @@
 
     <p>New ideas and collaborations are welcome! Feel free to <a href="https://www.linkedin.com/in/rodrigo-lozano-lucianez/" target="_blank">reach out via LinkedIn</a>.</p>
   </main>
+  <script>
+  // Cargar el menú desde menu.html
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-container').innerHTML = data;
+
+      // Activar el comportamiento del dropdown
+      const toggle = document.getElementById("dropdownToggle");
+      const menu = document.getElementById("dropdownMenu");
+
+      toggle.addEventListener("click", function(event) {
+        event.preventDefault();
+        menu.classList.toggle("show");
+      });
+    });
+</script>
+
 </body>
 </html>
