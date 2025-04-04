@@ -12,9 +12,8 @@
     nav ul li a { color: white; text-decoration: none; font-weight: bold; padding: 1rem; display: block; }
     nav ul li a:hover { text-decoration: underline; }
 
-    /* Estilos del menú desplegable */
     .dropdown-content {
-      display: none; /* Oculto por defecto */
+      display: none;
       position: absolute;
       background-color: #004080;
       min-width: 200px;
@@ -32,7 +31,7 @@
       background-color: #005599;
     }
 
-    .show { display: block; } /* Clase para mostrar el menú */
+    .show { display: block; }
 
     main { padding: 2rem; }
     h1, h2, h3 { color: #003366; }
@@ -119,17 +118,21 @@
     <p>🌐 <a href="https://www.linkedin.com/in/rodrigo-lozano-lucianez/" target="_blank">Perfil de LinkedIn</a></p>
     <p>🔗 <a href="https://www.enlace-personalizado.com" target="_blank">Otro enlace personalizado</a></p>
   </main>
-  
+
+  <!-- ✅ Solo un script, al final -->
   <script>
-    // Script para mostrar/ocultar el menú al hacer clic
-    document.getElementById("dropdownToggle").addEventListener("click", function(event) {
-      event.preventDefault(); // Previene que el enlace actúe como tal
-      document.getElementById("dropdownMenu").classList.toggle("show");
+    document.addEventListener("DOMContentLoaded", function() {
+      const toggle = document.getElementById("dropdownToggle");
+      const menu = document.getElementById("dropdownMenu");
+
+      toggle.addEventListener("click", function(event) {
+        event.preventDefault();
+        menu.classList.toggle("show");
+      });
     });
   </script>
 </body>
 </html>
-</body>
-</html>
+
 
 
