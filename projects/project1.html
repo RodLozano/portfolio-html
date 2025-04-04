@@ -7,24 +7,7 @@
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li class="dropdown">
-          <a href="#">Proyectos ▾</a>
-          <ul class="dropdown-content">
-            <li><a href="project-1.html">Proyecto 1</a></li>
-            <li><a href="project-2.html">Proyecto 2</a></li>
-            <li><a href="project-3.html">Proyecto 3</a></li>
-          </ul>
-        </li>
-        <li><a href="../future-projects.html">Futuros Proyectos</a></li>
-        <li><a href="../contact.html">Contacto</a></li>
-        <li><a href="../assets/docs/cv.pdf" target="_blank">CV</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="menu-container"></div>
   <main>
     <h1>Proyecto 1: Análisis de Datos Turísticos</h1>
     <p><strong>Descripción:</strong> Este proyecto consiste en el análisis exploratorio de datos de ocupación hotelera en Castilla-La Mancha usando Python, pandas y visualización con matplotlib y seaborn.</p>
@@ -32,5 +15,20 @@
     <p><strong>Tecnologías usadas:</strong> Python, pandas, Jupyter, seaborn, matplotlib, scikit-learn.</p>
     <p><strong>Repositorio:</strong> <a href="#" target="_blank">(link a GitHub)</a></p>
   </main>
+<script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-container').innerHTML = data;
+
+        const toggle = document.getElementById("dropdownToggle");
+        const menu = document.getElementById("dropdownMenu");
+
+        toggle.addEventListener("click", function(event) {
+          event.preventDefault();
+          menu.classList.toggle("show");
+        });
+      });
+  </script>
 </body>
 </html>
