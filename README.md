@@ -12,6 +12,27 @@ Este repositorio contiene una colección organizada de mis experiencias profesio
 - `style.css`: Estilos reutilizables para el sitio (opcional si se separa del HTML).
 - `README.md`: Este archivo.
 
+portfolio/
+│
+├── index.html                  # Página principal (tu CV y presentación general)
+├── projects/
+│   ├── project-1.html          # Página individual para proyecto 1
+│   ├── project-2.html          # Página individual para proyecto 2
+│   └── ...                     # Agregá más proyectos fácilmente
+│
+├── future-projects.html       # Ideas o investigaciones en desarrollo
+├── contact.html               # Formulario o info de contacto
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css           # Estilos reutilizables (opcional si lo tenés inline)
+│   ├── images/
+│   │   └── ...                 # Logos, screenshots de proyectos, etc.
+│   └── docs/
+│       └── cv.pdf              # CV descargable en PDF
+│
+└── README.md                  # Documentación del repositorio
+
 ## 🧑‍💻 Tecnologías utilizadas
 
 - **HTML5** para estructuración del contenido.
