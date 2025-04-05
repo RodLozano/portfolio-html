@@ -1,87 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Future Projects</title>
-  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 <body>
   <div id="menu-container"></div>
+
   <main>
     <h1>Future Projects</h1>
-    <p>Below is a list of upcoming project ideas and research topics Rodrigo Lozano Luciáñez is planning to explore:</p>
+    <h2 class="section-subtitle">Ideas, concepts & possible research lines</h2>
 
+    <h3>My Ideas</h3>
     <ul>
-     <h3>My Ideas</h3>
-      <ul>
-        <li>Dashboard of geopolitics, we live in a confusing world and it migth be a really usefull tool (it was the other option I had for the master thesis)</li>
-        <li>Trading sandbox with interactivebrokers API focusing on model testing (time series, Neural Networks, Reinforcement Learning, genetic algorithms)</li>
-        <li>Signisan: custom watch brand with Generative Artificial Intelligence for designs</li>
-        <li>WebScraping housing market (nowadays big cities in werten countries tend to have really tough housing markets and disperse offering, this should help centralize the market and conect buyers and sellers)</li>
-        <li>WebScraping car/bike market</li>
-        <li>LLM Agent for calendar/schedule organization</li>
-        <li>MultiAgent system for photo gallery organization (Artificial vision)</li>
-        <li>Application of RAG + Vector DBs in the legal domain for document analysis.</li
-      </ul>
-
-    
-    <h3>PhD</h3>
-      <h4>I've had the idea since 2023 when I had a couple conversations with my master thesis tutor</h4>
-      <ul>
-        <li>Finance, untraditional methods of financial asset analysis using machine learning</li>
-        <li>Behavioral economics, bias quantification</li>
-      </ul>
-          
-    <h3>Workwise</h3>
-      <ul>
-        <li>Becoming a professor at university, bachelor or masters. Partime, I wouldnt like to miss on the business/entrepenurial world</li>
-        <li>Devolping several entrepenurial activities (Not only data, I'm interested in a several industries related to new technologies, marketing, retail and design)</li>
-      </ul>
+      <li>Dashboard of geopolitics, we live in a confusing world and it might be a really useful tool (it was the other option I had for the master thesis)</li>
+      <li>Trading sandbox with interactivebrokers API focusing on model testing (time series, Neural Networks, Reinforcement Learning, genetic algorithms)</li>
+      <li>Signisan: custom watch brand with Generative Artificial Intelligence for designs</li>
+      <li>WebScraping housing market (nowadays big cities in Western countries tend to have really tough housing markets and disperse offering, this should help centralize the market and connect buyers and sellers)</li>
+      <li>WebScraping car/bike market</li>
+      <li>LLM Agent for calendar/schedule organization</li>
+      <li>MultiAgent system for photo gallery organization (Artificial vision)</li>
+      <li>Application of RAG + Vector DBs in the legal domain for document analysis.</li>
     </ul>
 
-    <p>
-  New ideas and collaborations are welcome! Feel free to reach out:
-</p>
+    <h3>PhD</h3>
+    <h4>I've had the idea since 2023 when I had a couple conversations with my master thesis tutor</h4>
+    <ul>
+      <li>Finance, untraditional methods of financial asset analysis using machine learning</li>
+      <li>Behavioral economics, bias quantification</li>
+    </ul>
 
-<div class="contact-icons">
-  <a href="mailto:rodrigo@email.com" class="icon-link" title="Email">
-    <img src="assets/images/email.png" alt="Email" class="social-icon" />
-  </a>
-  <a href="https://www.linkedin.com/in/rodrigo-lozano-lucianez/" target="_blank" class="icon-link" title="LinkedIn">
-    <img src="assets/images/linkedin.png" alt="LinkedIn" class="social-icon" />
-  </a>
-</div>
+    <h3>Workwise</h3>
+    <ul>
+      <li>Becoming a professor at university, bachelor or masters. Part-time, I wouldn’t like to miss on the business/entrepreneurial world</li>
+      <li>Developing several entrepreneurial activities (Not only data, I'm interested in several industries related to new technologies, marketing, retail and design)</li>
+    </ul>
+
+    <p>New ideas and collaborations are welcome! Feel free to reach out:</p>
+
+    <div class="contact-icons">
+      <a href="mailto:rodrigo@email.com" class="icon-link" title="Email">
+        <img src="assets/images/email.png" alt="Email" class="social-icon" />
+      </a>
+      <a href="https://www.linkedin.com/in/rodrigo-lozano-lucianez/" target="_blank" class="icon-link" title="LinkedIn">
+        <img src="assets/images/linkedin.png" alt="LinkedIn" class="social-icon" />
+      </a>
+    </div>
   </main>
-   <footer class="site-footer">
-      <nav>
-        <div class="nav-links-container">
-          <p>Copyright &#169; 2025 Rodrigo Lozano. All Rights Reserved.</p>
-        </div>
-      </nav>
-      
-    </footer>
+
+  <footer class="site-footer">
+    <nav>
+      <div class="nav-links-container">
+        <p>&copy; 2025 Rodrigo Lozano. All Rights Reserved.</p>
+      </div>
+    </nav>
+  </footer>
+
   <script>
-  fetch('menu.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('menu-container').innerHTML = data;
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-container').innerHTML = data;
 
-      const toggle = document.getElementById("dropdownToggle");
-      const menu = document.getElementById("dropdownMenu");
-      const hamburger = document.querySelector(".menu-toggle");
-      const navMenu = document.querySelector(".nav-menu");
+        const toggle = document.getElementById("dropdownToggle");
+        const menu = document.getElementById("dropdownMenu");
+        const hamburger = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector(".nav-menu");
 
-      toggle?.addEventListener("click", function(event) {
-        event.preventDefault();
-        menu.classList.toggle("show");
+        toggle?.addEventListener("click", function(event) {
+          event.preventDefault();
+          menu.classList.toggle("show");
+        });
+
+        hamburger?.addEventListener("click", function() {
+          navMenu.classList.toggle("show");
+        });
       });
-
-      hamburger?.addEventListener("click", function() {
-        navMenu.classList.toggle("show");
-      });
-    });
-</script>
-
+  </script>
 </body>
 </html>
