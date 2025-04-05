@@ -16,7 +16,7 @@
     <p><strong>Repositorio:</strong> <a href="#" target="_blank">(link a GitHub)</a></p>
   </main>
 <script>
-    fetch('menu.html')
+    fetch('../menu.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('menu-container').innerHTML = data;
