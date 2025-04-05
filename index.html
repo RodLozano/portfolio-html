@@ -103,10 +103,16 @@
 
       const toggle = document.getElementById("dropdownToggle");
       const menu = document.getElementById("dropdownMenu");
+      const hamburger = document.querySelector(".menu-toggle");
+      const navMenu = document.querySelector(".nav-menu");
 
-      toggle.addEventListener("click", function(event) {
+      toggle?.addEventListener("click", function(event) {
         event.preventDefault();
         menu.classList.toggle("show");
+      });
+
+      hamburger?.addEventListener("click", function() {
+        navMenu.classList.toggle("show");
       });
     });
 </script>
