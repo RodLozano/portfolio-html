@@ -72,6 +72,13 @@ nav {
   z-index: 200;
 }
 
+.site-footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
 /* Menú principal */
 .nav-menu {
   display: flex;
