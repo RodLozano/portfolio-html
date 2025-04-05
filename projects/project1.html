@@ -1,48 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto 1 - Análisis de datos turísticos</title>
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nombre del Proyecto </title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
   <div id="menu-container"></div>
+
   <main>
-    <h1>Proyecto 1: Análisis de Datos Turísticos</h1>
-    <p><strong>Descripción:</strong> Este proyecto consiste en el análisis exploratorio de datos de ocupación hotelera en Castilla-La Mancha usando Python, pandas y visualización con matplotlib y seaborn.</p>
-    <p><strong>Objetivo:</strong> Identificar patrones estacionales y predictores clave para modelos de demanda hotelera.</p>
-    <p><strong>Tecnologías usadas:</strong> Python, pandas, Jupyter, seaborn, matplotlib, scikit-learn.</p>
-    <p><strong>Repositorio:</strong> <a href="#" target="_blank">(link a GitHub)</a></p>
+    <section class="project-details">
+      <h1>Plantilla para Proyectos</h1>
+      <h1>Nombre del Proyecto</h1>
+
+      <p><strong>Descripción:</strong> Explicación breve del proyecto, por qué lo hiciste y en qué contexto surgió.</p>
+
+      <p><strong>Objetivo:</strong> Qué problema abordaste o qué resultados buscabas obtener.</p>
+
+      <p><strong>Tecnologías usadas:</strong></p>
+      <div>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Pandas</span>
+        <span class="tech-badge">Seaborn</span>
+        <span class="tech-badge">scikit-learn</span>
+      </div>
+
+      <p><strong>Repositorio:</strong>
+        <a href="https://github.com/RodLozano/proyecto-demo" target="_blank">Ver en GitHub</a>
+      </p>
+    </section>
+
+    <section class="project-gallery">
+      <h2>Capturas de Pantalla</h2>
+      <img src="../assets/img/demo-proyecto.png" alt="Demo del proyecto" style="max-width:100%; border-radius: 10px; margin-bottom: 1rem;">
+    </section>
+
+    <section class="project-results">
+      <h2>Resultados</h2>
+      <ul>
+        <li>Visualizaciones interactivas del comportamiento turístico en la región</li>
+        <li>Modelo de predicción con un 87% de precisión</li>
+        <li>Documentación completa con notebooks y ejemplos reproducibles</li>
+      </ul>
+    </section>
+
+    <section class="project-lessons">
+      <h2>Lecciones Aprendidas</h2>
+      <p>Me enfrenté al reto de limpiar datos desordenados y trabajar con diferentes formatos. Aprendí a generar visualizaciones efectivas para comunicar resultados a perfiles no técnicos.</p>
+    </section>
+
+    <section class="project-conclusion">
+      <h2>Conclusiones</h2>
+      <p>Este proyecto consolidó mis habilidades en análisis de datos y comunicación de resultados, y sentó las bases para futuros modelos de forecasting en turismo regional.</p>
+    </section>
+
+    <section class="project-links" style="margin-top: 2rem;">
+      <a href="https://colab.research.google.com/..." class="btn btn-outline" target="_blank">Ver en Colab</a>
+      <a href="../assets/docs/CV 2025 RLL V1 EN.pdf" class="btn btn-solid" download>Descargar CV</a>
+    </section>
   </main>
-   <footer class="site-footer">
-      <nav>
-        <div class="nav-links-container">
-          <p>Copyright &#169; 2025 Rodrigo Lozano. All Rights Reserved.</p>
-        </div>
-      </nav>
-      
-    </footer>
-<script>
-  fetch('../menu.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('menu-container').innerHTML = data;
 
-      const toggle = document.getElementById("dropdownToggle");
-      const menu = document.getElementById("dropdownMenu");
-      const hamburger = document.querySelector(".menu-toggle");
-      const navMenu = document.querySelector(".nav-menu");
+  <footer class="site-footer">
+    <div class="nav-links-container">
+      <p>&copy; 2025 Rodrigo Lozano. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-      toggle?.addEventListener("click", function(event) {
-        event.preventDefault();
-        menu.classList.toggle("show");
+  <script>
+    fetch('../menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-container').innerHTML = data;
+
+        const toggle = document.getElementById("dropdownToggle");
+        const menu = document.getElementById("dropdownMenu");
+        const hamburger = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector(".nav-menu");
+
+        toggle?.addEventListener("click", function (event) {
+          event.preventDefault();
+          menu.classList.toggle("show");
+        });
+
+        hamburger?.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
       });
-
-      hamburger?.addEventListener("click", function() {
-        navMenu.classList.toggle("show");
-      });
-    });
-</script>
+  </script>
 </body>
 </html>
