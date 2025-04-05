@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Name</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <div id="menu-container"></div>
+
+  <main>
+    <section class="project-details">
+      <h1>Project Template</h1>
+      <h1>Project Name</h1>
+
+      <p><strong>Description:</strong> A short explanation of the project, why you built it, and the context where it originated.</p>
+
+      <p><strong>Objective:</strong> What problem you aimed to solve or what results you were trying to achieve.</p>
+
+      <p><strong>Technologies used:</strong></p>
+      <div>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Pandas</span>
+        <span class="tech-badge">Seaborn</span>
+        <span class="tech-badge">scikit-learn</span>
+      </div>
+
+      <p><strong>Repository:</strong>
+        <a href="https://github.com/RodLozano/proyecto-demo" target="_blank">View on GitHub</a>
+      </p>
+    </section>
+
+    <section class="project-gallery">
+      <h2>Unique Screenshots</h2>
+      <img src="../assets/img/demo-proyecto.png" alt="Project demo" style="max-width:100%; border-radius: 10px; margin-bottom: 1rem;">
+    </section>
+
+    <section class="screenshot-carousel">
+      <h2>Project Screenshots CARROUSEL</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-track">
+          <img src="../assets/images/project1-1.png" alt="Screenshot 1" class="carousel-image">
+          <img src="../assets/images/project1-2.png" alt="Screenshot 2" class="carousel-image">
+          <img src="../assets/images/project1-3.png" alt="Screenshot 3" class="carousel-image">
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="project-results">
+      <h2>Results</h2>
+      <ul>
+        <li>Metrics</li>
+        <li>Relation to objective</li>
+      </ul>
+    </section>
+
+    <section class="project-lessons">
+      <h2>Lessons Learned</h2>
+      <p>I faced the challenge of cleaning messy datasets and working with various formats. I learned how to generate effective visualizations to communicate results to non-technical stakeholders.</p>
+    </section>
+
+    <section class="project-conclusion">
+      <h2>Conclusions</h2>
+      <p>This project helped solidify my skills in data analysis and result communication, and laid the foundation for future forecasting models in regional tourism.</p>
+    </section>
+
+    <section class="project-links" style="margin-top: 2rem;">
+      <a href="https://colab.research.google.com/..." class="btn btn-outline" target="_blank">View on Colab</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="nav-links-container">
+      <p>&copy; 2025 Rodrigo Lozano. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    fetch('../menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-container').innerHTML = data;
+
+        const toggle = document.getElementById("dropdownToggle");
+        const menu = document.getElementById("dropdownMenu");
+        const hamburger = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector(".nav-menu");
+
+        toggle?.addEventListener("click", function (event) {
+          event.preventDefault();
+          menu.classList.toggle("show");
+        });
+
+        hamburger?.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+      });
+  </script>
+</body>
+</html>
