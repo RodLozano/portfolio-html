@@ -365,6 +365,26 @@ nav.navbar {
   font-size: 0.8rem;
   margin: 0.2rem 0.3rem;
 }
+.navbar {
+  display: flex;
+  align-items: center;       /* Centrado vertical */
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #003366;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.logo:hover {
+  text-decoration: none;
+  color: white; /* Mantiene el color sin efecto hover */
+}
 html {
   scroll-behavior: smooth;
 }
