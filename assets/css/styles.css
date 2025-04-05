@@ -1,77 +1,77 @@
-/* Import Google Font */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
-/* Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+/* ------------------ */
+/* 🔷 Base y Reset    */
+/* ------------------ */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* ------------------ */
+/* 🔷 Tipografía      */
+/* ------------------ */
+h1, h2, h3 {
+  color: #003366;
 }
 
 a {
   color: #0066cc;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #004080;
 }
 
-h1, h2, h3 {
-  color: #003366;
-  margin-bottom: 1rem;
-}
-
+/* ------------------ */
+/* 🔷 Layout General  */
+/* ------------------ */
 main {
-  max-width: 900px;
-  margin: 2rem auto;
   padding: 2rem;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 ul {
   list-style-type: disc;
   margin-left: 2rem;
-  margin-bottom: 1.5rem;
 }
 
-/* Navigation */
-nav {
+/* ------------------ */
+/* 🔷 Navbar & Logo   */
+/* ------------------ */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #003366;
   padding: 1rem 2rem;
-  position: relative;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 1.75rem;
-  background: none;
-  border: none;
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
   color: white;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  z-index: 200;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.logo:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .nav-menu {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: flex-end;
-  align-items: center;
   list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-menu li {
@@ -80,35 +80,29 @@ nav {
 
 .nav-menu a {
   color: white;
-  font-weight: 500;
-  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1rem;
   display: block;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
 }
 
 .nav-menu a:hover {
-  background-color: #004080;
+  text-decoration: underline;
 }
 
-/* Dropdown */
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
   background-color: #004080;
   min-width: 200px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-  padding: 0.5rem 0;
+  z-index: 1;
+  top: 100%;
+  left: 0;
 }
 
 .dropdown-content li a {
-  padding: 0.75rem 1rem;
-  font-weight: 400;
   color: white;
+  padding: 0.75rem;
 }
 
 .dropdown-content li a:hover {
@@ -119,104 +113,9 @@ nav {
   display: block;
 }
 
-/* Footer */
-.site-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-/* Contact section */
-.contact-section {
-  text-align: center;
-  margin-top: 5rem;
-}
-
-.section-subtitle {
-  color: #666;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: #000;
-}
-
-.contact-box {
-  display: inline-flex;
-  gap: 2rem;
-  padding: 1rem 2rem;
-  border: 2px solid #ccc;
-  border-radius: 2rem;
-  background-color: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.contact-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-  color: #000;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.contact-link:hover {
-  color: #0066cc;
-}
-
-.icon {
-  font-size: 1.2rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #003366;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    padding: 1rem 1.5rem;
-  }
-
-  .nav-menu.show {
-    display: flex;
-  }
-
-  .nav-menu li {
-    width: 100%;
-  }
-
-  .nav-menu a {
-    width: 100%;
-  }
-
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    padding-left: 1rem;
-  }
-
-  .contact-box {
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
+/* ------------------ */
+/* 🔷 Hero Section    */
+/* ------------------ */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -258,80 +157,18 @@ nav {
   margin-bottom: 1.5rem;
 }
 
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 0.6rem 1.2rem;
-  font-weight: 500;
-  border-radius: 2rem;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.btn-outline {
-  border: 2px solid #000;
-  color: #000;
-  background-color: transparent;
-}
-
-.btn-solid {
-  background-color: #333;
-  color: #fff;
-  border: none;
-}
-
-.hero-socials a {
-  font-size: 1.5rem;
-  margin: 0 0.5rem;
-  color: #000;
-  transition: color 0.3s;
-}
-
-.hero-socials a:hover {
-  color: #0066cc;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-nav.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: white;
-  text-decoration: none;
-  margin-right: 2rem;
-}
+/* ------------------ */
+/* 🔷 Botones         */
+/* ------------------ */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  font-weight: 500;
   border-radius: 30px;
-  text-decoration: none;
+  font-weight: 500;
   font-size: 1rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-outline {
@@ -344,47 +181,92 @@ nav.navbar {
   background-color: #003366;
   color: white;
 }
-.social-icon {
-  width: 32px;      
-  height: 32px;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-  margin: 0 0.3rem;
-  display: inline-block;
+
+.btn-solid {
+  background-color: #333;
+  color: white;
+  border: none;
 }
 
-.social-icon:hover {
-  transform: scale(1.1);
+.btn-solid:hover {
+  background-color: #555;
 }
-.tech-badge {
-  display: inline-block;
-  background-color: #003366;
-  color: white;
-  padding: 0.3rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  margin: 0.2rem 0.3rem;
-}
-.navbar {
+
+/* ------------------ */
+/* 🔷 Contact Section */
+/* ------------------ */
+.contact-box {
   display: flex;
-  align-items: center;       /* Centrado vertical */
-  justify-content: space-between;
-  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.contact-link:hover {
+  color: #0066cc;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* ------------------ */
+/* 🔷 Footer          */
+/* ------------------ */
+.site-footer {
   background-color: #003366;
-}
-
-.logo {
-  font-size: 1.25rem;
-  font-weight: 600;
   color: white;
-  text-decoration: none;
-  margin-right: 2rem;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
 }
 
-.logo:hover {
-  text-decoration: none;
-  color: white; /* Mantiene el color sin efecto hover */
+/* ------------------ */
+/* 🔷 Responsive      */
+/* ------------------ */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
-html {
-  scroll-behavior: smooth;
-}
+
