@@ -1,3 +1,4 @@
+
 /* Import Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
@@ -9,10 +10,15 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
+  font-size: 16px;
 }
 
 a {
@@ -47,10 +53,25 @@ ul {
 }
 
 /* Navigation */
-nav {
-  background-color: #003366;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 1rem 2rem;
-  position: relative;
+  background-color: #003366;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.logo:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .menu-toggle {
@@ -216,7 +237,19 @@ nav {
     flex-direction: column;
     gap: 1rem;
   }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
+
+/* Hero section */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -267,63 +300,6 @@ nav {
 }
 
 .btn {
-  padding: 0.6rem 1.2rem;
-  font-weight: 500;
-  border-radius: 2rem;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.btn-outline {
-  border: 2px solid #000;
-  color: #000;
-  background-color: transparent;
-}
-
-.btn-solid {
-  background-color: #333;
-  color: #fff;
-  border: none;
-}
-
-.hero-socials a {
-  font-size: 1.5rem;
-  margin: 0 0.5rem;
-  color: #000;
-  transition: color 0.3s;
-}
-
-.hero-socials a:hover {
-  color: #0066cc;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-nav.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: white;
-  text-decoration: none;
-  margin-right: 2rem;
-}
-.btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   font-weight: 500;
@@ -344,8 +320,15 @@ nav.navbar {
   background-color: #003366;
   color: white;
 }
+
+.btn-solid {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
 .social-icon {
-  width: 32px;      
+  width: 32px;
   height: 32px;
   object-fit: contain;
   transition: transform 0.2s ease;
@@ -356,6 +339,7 @@ nav.navbar {
 .social-icon:hover {
   transform: scale(1.1);
 }
+
 .tech-badge {
   display: inline-block;
   background-color: #003366;
@@ -364,27 +348,4 @@ nav.navbar {
   border-radius: 12px;
   font-size: 0.8rem;
   margin: 0.2rem 0.3rem;
-}
-.navbar {
-  display: flex;
-  align-items: center;       /* Centrado vertical */
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: #003366;
-}
-
-.logo {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: white;
-  text-decoration: none;
-  margin-right: 2rem;
-}
-
-.logo:hover {
-  text-decoration: none;
-  color: white; /* Mantiene el color sin efecto hover */
-}
-html {
-  scroll-behavior: smooth;
 }
