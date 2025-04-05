@@ -310,10 +310,16 @@ nav {
     gap: 0.5rem;
   }
 }
+nav.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .logo {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.4rem;
+  font-weight: 600;
   color: white;
   text-decoration: none;
-  margin-right: auto;
+  margin-right: 2rem;
 }
