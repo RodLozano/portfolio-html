@@ -349,3 +349,60 @@ ul {
   font-size: 0.8rem;
   margin: 0.2rem 0.3rem;
 }
+.cv-summary {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.cv-overview {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.cv-box {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 300px;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.cv-box h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.cv-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.cv-skills {
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cv-skill-group {
+  margin-bottom: 2rem;
+}
+
+.cv-skill-group h3 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.cv-skill-list {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.cv-skill-list li::before {
+  content: "✓";
+  margin-right: 0.5rem;
+  color: #003366;
+  font-weight: bold;
+}
