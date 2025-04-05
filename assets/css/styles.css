@@ -356,3 +356,12 @@ nav.navbar {
 .social-icon:hover {
   transform: scale(1.1);
 }
+.tech-badge {
+  display: inline-block;
+  background-color: #003366;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin: 0.2rem 0.3rem;
+}
