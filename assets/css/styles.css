@@ -1,4 +1,3 @@
-
 /* Import Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
@@ -38,7 +37,8 @@ h1, h2, h3 {
 }
 
 main {
-  max-width: 900px;
+  width: 90%;
+  max-width: 1100px;
   margin: 2rem auto;
   padding: 2rem;
   background-color: white;
@@ -66,11 +66,9 @@ ul {
   font-weight: 600;
   color: white;
   text-decoration: none;
-  margin-right: auto;
 }
 
 .logo:hover {
-  text-decoration: none;
   color: white;
 }
 
@@ -103,7 +101,6 @@ ul {
   color: white;
   font-weight: 500;
   padding: 0.75rem 1rem;
-  display: block;
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
@@ -112,7 +109,6 @@ ul {
   background-color: #004080;
 }
 
-/* Dropdown */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -128,7 +124,6 @@ ul {
 
 .dropdown-content li a {
   padding: 0.75rem 1rem;
-  font-weight: 400;
   color: white;
 }
 
@@ -140,117 +135,7 @@ ul {
   display: block;
 }
 
-/* Footer */
-.site-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-/* Contact section */
-.contact-section {
-  text-align: center;
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-}
-
-.section-subtitle {
-  color: #666;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: #000;
-}
-
-.contact-box {
-  display: inline-flex;
-  gap: 2rem;
-  padding: 1rem 2rem;
-  border: 2px solid #ccc;
-  border-radius: 2rem;
-  background-color: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.contact-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-  color: #003366;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.contact-link:hover {
-  color: #0066cc;
-}
-
-.icon {
-  font-size: 1.2rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #003366;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    padding: 1rem 1.5rem;
-  }
-
-  .nav-menu.show {
-    display: flex;
-  }
-
-  .nav-menu li {
-    width: 100%;
-  }
-
-  .nav-menu a {
-    width: 100%;
-  }
-
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    padding-left: 1rem;
-  }
-
-  .contact-box {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-
-/* Hero section */
+/* Hero Section */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -258,6 +143,7 @@ ul {
   justify-content: center;
   gap: 2rem;
   margin-top: 4rem;
+  margin-bottom: 4rem;
   text-align: center;
 }
 
@@ -266,7 +152,7 @@ ul {
   height: 250px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .hero-content {
@@ -305,9 +191,8 @@ ul {
   padding: 0.75rem 1.5rem;
   font-weight: 500;
   border-radius: 30px;
-  text-decoration: none;
   font-size: 1rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -324,8 +209,51 @@ ul {
 
 .btn-solid {
   background-color: #333;
-  color: #fff;
+  color: white;
   border: none;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #003366;
+}
+
+.contact-box {
+  display: inline-flex;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  border: 2px solid #ccc;
+  border-radius: 2rem;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.contact-link:hover {
+  color: #0066cc;
 }
 
 .social-icon {
@@ -341,15 +269,16 @@ ul {
   transform: scale(1.1);
 }
 
-.tech-badge {
-  display: inline-block;
+/* Footer */
+.site-footer {
   background-color: #003366;
   color: white;
-  padding: 0.3rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  margin: 0.2rem 0.3rem;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
+
+/* CV Summary */
 .cv-summary {
   margin-top: 3rem;
   text-align: center;
@@ -369,11 +298,8 @@ ul {
   padding: 2rem;
   width: 300px;
   background-color: white;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-}
-
-.cv-box h3 {
-  margin: 1rem 0 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .cv-icon {
@@ -382,18 +308,13 @@ ul {
 }
 
 .cv-skills {
-  text-align: left;
   max-width: 900px;
   margin: 0 auto;
+  text-align: left;
 }
 
 .cv-skill-group {
   margin-bottom: 2rem;
-}
-
-.cv-skill-group h3 {
-  color: #003366;
-  margin-bottom: 0.5rem;
 }
 
 .cv-skill-list {
@@ -406,4 +327,92 @@ ul {
   margin-right: 0.5rem;
   color: #003366;
   font-weight: bold;
+}
+
+.tech-badge {
+  display: inline-block;
+  background-color: #003366;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin: 0.2rem 0.3rem;
+}
+
+/* Carousel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .contact-box {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cv-overview {
+    flex-direction: column;
+    align-items: center;
+  }
 }
