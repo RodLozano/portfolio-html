@@ -66,9 +66,11 @@ ul {
   font-weight: 600;
   color: white;
   text-decoration: none;
+  margin-right: auto;
 }
 
 .logo:hover {
+  text-decoration: none;
   color: white;
 }
 
