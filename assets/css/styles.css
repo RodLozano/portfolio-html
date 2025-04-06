@@ -132,7 +132,9 @@ ul {
 .dropdown-content li a:hover {
   background-color: #005599;
 }
-
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 .show {
   display: block;
 }
