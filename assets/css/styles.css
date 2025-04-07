@@ -511,3 +511,8 @@ ul {
 .dropdown {
   position: relative;
 }
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
