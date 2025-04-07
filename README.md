@@ -8,7 +8,6 @@ Este repositorio contiene una colección organizada de mis experiencias profesio
 - `index.html`: Página principal (puede redirigir al perfil o resumir todo el contenido).
 - `profile.html`: Perfil profesional completo, incluyendo experiencia, educación, certificaciones e idiomas.
 - `future_projects.html`: Lista de ideas y líneas de investigación/proyectos a desarrollar.
-- `contact.html`: Página de contacto (en construcción o editable).
 - `style.css`: Estilos reutilizables para el sitio (opcional si se separa del HTML).
 - `README.md`: Este archivo.
 ```bash
