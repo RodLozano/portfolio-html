@@ -151,8 +151,8 @@ ul {
 }
 
 .hero-img img {
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -163,19 +163,19 @@ ul {
 }
 
 .hero-subtitle {
-  font-size: 1rem;
+  font-size: 2rem;
   color: #666;
   margin-bottom: 0.5rem;
 }
 
 .hero-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
 }
 
 .hero-role {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 500;
   color: #555;
   margin-bottom: 1.5rem;
