@@ -511,9 +511,19 @@ ul {
 .dropdown {
   position: relative;
 }
-.arrow {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  bottom: 2.5rem;
+
+/* Estilo para el contenedor del ícono de flecha */
+.scroll-down {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
+
+/* Estilo para el ícono de flecha */
+.arrow {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
