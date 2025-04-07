@@ -493,3 +493,7 @@ ul {
   background-color: #005599;
   color: #fff;
 }
+
+.dropdown {
+  position: relative;
+}
