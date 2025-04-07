@@ -527,3 +527,30 @@ ul {
   animation: bounce 2s infinite;
 }
 
+@media (max-width: 768px) {
+  .scroll-down {
+    display: none;
+  }
+}
+
+.hero {
+  position: relative;
+  padding-bottom: 4rem; /* espacio para la flecha */
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
