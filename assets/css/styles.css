@@ -160,7 +160,16 @@ ul {
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+.hero-img {
+  margin-right: 2rem;
+}
 
+@media (max-width: 768px) {
+  .hero-img {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
 .hero-content {
   max-width: 500px;
   width: 100%;
